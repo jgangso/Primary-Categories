@@ -1,5 +1,6 @@
 <?php
 
+// Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /*
@@ -15,5 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Copyright 2016 Jacob McKinney
  */
 
+
+// include files containing meta box, shortcode, and custom query/loop
 include 'pc-meta-box.php';
 include 'pc-loop.php';
