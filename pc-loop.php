@@ -3,20 +3,25 @@
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+// Add shortcode to display loop from custom query based on set primary category
 function pc_display( $atts ) {
 
+	// Set valid shortcode attributes
 	$a = shortcode_atts( array(
 		'name' => 'uncategorized'
 	), $atts );
 
+	// Set query args to display any post type with a primary category set to name attribute from shortcode
 	$pc_query_args = array( 
 		'post_type' => 'any', 
 		'meta_key' => 'primary_category', 
 		'meta_value' => $a['name'] 
 	);
 
+	// Create custom query
 	$pc_query = new WP_Query( $pc_query_args );
 
+	// Loop through posts returned by query
 	while ( $pc_query->have_posts() ) {
 
 		$pc_query->the_post();
@@ -25,6 +30,7 @@ function pc_display( $atts ) {
 
 	}
 
+	// reset postdata
 	wp_reset_postdata();
 
 }
