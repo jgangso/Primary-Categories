@@ -18,6 +18,8 @@ function pc_display( $atts ) {
 		'meta_value' => $a['name'] 
 	);
 
+	echo '<ul>';
+
 	// Create custom query
 	$pc_query = new WP_Query( $pc_query_args );
 
@@ -32,6 +34,8 @@ function pc_display( $atts ) {
 
 	// reset postdata
 	wp_reset_postdata();
+
+	echo '</ul>';
 
 }
 add_shortcode( 'primary_category', 'pc_display' );
