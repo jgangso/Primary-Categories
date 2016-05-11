@@ -18,24 +18,28 @@ function pc_display( $atts ) {
 		'meta_value' => $a['name'] 
 	);
 
-	echo '<ul>';
-
 	// Create custom query
 	$pc_query = new WP_Query( $pc_query_args );
 
 	// Loop through posts returned by query
-	while ( $pc_query->have_posts() ) {
+	if( $pc_query->have_posts() ) {
 
-		$pc_query->the_post();
+		echo '<ul>';
+	
+		while ( $pc_query->have_posts() ) {
 
-		echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+			$pc_query->the_post();
+
+			echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+
+		}
+
+		echo '</ul>';
 
 	}
 
 	// reset postdata
 	wp_reset_postdata();
-
-	echo '</ul>';
 
 }
 add_shortcode( 'primary_category', 'pc_display' );
