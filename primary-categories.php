@@ -16,7 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Copyright 2016 Jacob McKinney
  */
 
+// Define constant for plugin path
+define( 'PC_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
-// include files containing meta box, shortcode, and custom query/loop
-include 'pc-meta-box.php';
-include 'pc-loop.php';
+// include files containing meta box and shortcode
+include PC_PLUGIN_PATH . 'classes/class-pc-meta-box.php';
+include PC_PLUGIN_PATH . 'classes/class-pc-shortcode.php';
+
+$meta_box = new PC_Meta_Box();
+
+$shortcode = new PC_Shortcode();
