@@ -4,7 +4,7 @@ class PC_Shortcode {
     
     public function __construct() {
         
-        add_shortcode( 'primary_category', array( $this, 'pc_display' ) );
+        add_shortcode( 'primary-category', array( $this, 'pc_display' ) );
         
     }
     
@@ -40,6 +40,10 @@ class PC_Shortcode {
     
     		echo '</ul>';
     
+    	} else {
+    	    
+    	    echo "Sorry, there are no posts with that primary category.";
+    	    
     	}
     
     	// reset postdata
