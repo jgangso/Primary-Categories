@@ -4,9 +4,9 @@ class PC_Meta_Box {
     
     public function __construct() {
         
-        add_action( 'add_meta_boxes', 'pc_meta_box' );
+        add_action( 'add_meta_boxes', array( $this, 'pc_meta_box' ) );
         
-        add_action( 'save_post', 'pc_field_data' );
+        add_action( 'save_post', array( $this, 'pc_field_data' ) );
         
     }
     
@@ -25,7 +25,7 @@ class PC_Meta_Box {
     		add_meta_box (
     			'primary_category',
     			'Primary Category',
-    			'pc_meta_box_content',
+    			array( $this, 'pc_meta_box_content' ),
     			$post_type,
     			'side',
     			'high'

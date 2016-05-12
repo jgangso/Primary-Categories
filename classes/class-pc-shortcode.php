@@ -4,7 +4,7 @@ class PC_Shortcode {
     
     public function __construct() {
         
-        add_shortcode( 'primary_category', 'pc_display' );
+        add_shortcode( 'primary_category', array( $this, 'pc_display' ) );
         
     }
     
