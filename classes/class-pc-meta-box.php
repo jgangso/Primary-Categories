@@ -71,7 +71,7 @@ class PC_Meta_Box {
 
     	if ( isset( $_POST[ 'primary_category' ] ) ) {
     
-    		$primary_category = $_POST[ 'primary_category' ];
+    		$primary_category = sanitize_text_field( $_POST[ 'primary_category' ] );
     
     		update_post_meta( $post->ID, 'primary_category', $primary_category );
     
