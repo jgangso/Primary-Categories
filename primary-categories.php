@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /*
  * Plugin Name: Primary Categories
  * Description: Enebles user to select a primary category for posts and custom posts types and display posts based on their primary categories.
- * Plugin URI: 
+ * Plugin URI: http://jacobmckinney.com/primary-categories
  * Author: Jacob McKinney
  * Version: 0.1.0
  * Author URI: http://jacobmckinney.com/
