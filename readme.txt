@@ -3,8 +3,8 @@ Contributors: jacobmc
 Donate Link: 
 Tags: categories, shortcodes
 Requires at least: 3.4
-Tested up to: 4.5
-Stable tag: 1.0.0
+Tested up to: 4.6.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Users must update a post after adding a new category before that category will b
 3. Example output of shortcode.
 
 == Changelog ==
+= 1.0.1 =
+
+Updated plugin to be used with WordPress v. 4.6.1
 
 = 1.0.0 = 
 
