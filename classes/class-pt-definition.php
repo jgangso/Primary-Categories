@@ -3,9 +3,7 @@
 /**
  * Author:  Aikadesign Oy (JG) <tuki@aikadesign.fi>
  * Since:   2017/06
- * Project: designlahti.fi
  *
- * @package \Aikadesign\BaseTheme
  */
 class PT_Definition {
 
